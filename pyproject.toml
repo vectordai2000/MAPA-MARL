@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mapa-exp"
+version = "0.2.0"
+description = "UAV-assisted MEC simulator and hybrid-action constrained MARL toolkit"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Zifeng Dai" }]
+dependencies = ["torch>=2.0", "numpy>=1.24", "matplotlib>=3.7"]
+
+keywords = ["reinforcement-learning", "multi-agent", "uav", "mobile-edge-computing",
+            "hybrid-action-space", "constrained-rl", "pytorch"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["mapa_exp*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# experiment artefacts
+runs/
+results/
+figures_out/
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
